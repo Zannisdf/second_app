@@ -1,16 +1,16 @@
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @students.each do |student| %>
+      <tr scope="row">
+        <td><%= student.name %></td>
+        <td><%= student.email %></td>
       </tr>
-    </thead>
-    <tbody>
-      <% @students.each do |student| %>
-        <tr>
-          <td><%= student.name %></td>
-          <td><%= student.email %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+    <% end %>
+  </tbody>
+</table>
