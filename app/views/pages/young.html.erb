@@ -1,0 +1,20 @@
+<h1>Under 18 years old</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name:</th>
+      <th>Age:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @young_students.each do |student| %>
+      <tr>
+        <td><%= student.name %></td>
+        <td><%= student.age %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2><%= "There are, in total, #{@young_students.size} students under 18 years old." %></h2>

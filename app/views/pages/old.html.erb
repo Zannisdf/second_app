@@ -1,0 +1,20 @@
+<h1>Over 18 years old</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name:</th>
+      <th>Age:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @old_students.each do |student| %>
+      <tr>
+        <td><%= student.name %></td>
+        <td><%= student.age %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2><%= "There are, in total, #{@old_students.size} students 18 years old or older" %></h2>
